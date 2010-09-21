@@ -6,10 +6,7 @@ import net.liftweb.sitemap.{SiteMap, Menu}
 class Boot {
   
   def boot {
-    LiftRules.addToPackages("au.com.testlift")
-    
-    val siteMap = List(Menu("Home") / "index", Menu("Todo") / "todo" )
-    LiftRules.setSiteMap(SiteMap(siteMap:_*))
+    LiftRules.addToPackages("au.com.testlift")        
+    LiftRules.setSiteMap(SiteMap(Menu("Home") / "index"))
   }
-
 }
